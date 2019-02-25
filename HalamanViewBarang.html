@@ -6,13 +6,39 @@
 	<script type="text/javascript" src="JS/HalamanViewBarang.js"></script>
 </head>
 <body>
-
-	<div class="topnav">
-  		<a class="active" href="#home">Home</a>
-  		<a href="#news">News</a>
-  		  		<a href="#about">Keranjang</a>
-	</div>
-		<h4>Jaket Pria</h4>
+ <div class="sidemenu" id="mysidemenu">
+            <a href="javascript:void(0)" class="close" onclick="closesm()">&times;</a>
+            <div class="isisidemenu">
+                <a href="#">tops</a>
+                <a href="#">bottoms</a>
+                <a href="#">sales</a>
+                <a href="#">new arrival</a>
+            </div>
+        </div>
+        <!-------------------------------------------------------------------------------------------------------------------------------------->
+        <div class="bagianatas" >
+            <div class="menu">
+                <ul>
+                    <li><a class="navbutton" id="bukamenu" onclick="opensm()">&#9776</a></li>
+                </ul>
+            </div>
+            <header>
+                <div class="container" >
+                    <nav id="nav">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Sign in</a></li>
+                            <li><a href="#">services</a></li>
+                            <li><a href="#">cart</a></li>
+                        </ul>
+                    </nav>
+                </div> 
+            </header>
+        
+        </div>
+        <div class="main">
+            <div class="box">
+            	<h4 id="nama">Jaket Trendy</h4>
 
 		<div id="apaaja">
 		<div id="apaaja2">
@@ -25,10 +51,8 @@
 				<td>
 
 					<div>
-						<tr>
-					<td>Nama</td>
-					<td> : </td>
-					<td id="namabarang"> Jaket Trendy</td>
+					<tr>
+						<td id="namabarang"> Jaket Trendy</td>
 					</tr>
 					<tr>
 					<td>Ukuran</td>
@@ -55,18 +79,22 @@
 					<tr>
 					<td>Deskripsi</td>
 					<td> : </td>
-					<td id="deskripsibarang"> Barang original import dari china dan korea</td>
+					<td id="deskripsibarang" style="text-align: justify;"> Barang original import dari china dan korea</td>
+					<td></td><td><td><td></td></td></td><td><td><td><td></td></td></td></td>
 					</tr>
-				</div>
+
+					</div>
 				</td>
 			</tr>
-			
+
 		</table>	
-</div>
-</div>
+           
+    </div>
+
+    </div>
 
 <script>
-	
+	closesm();
 	magnify("gambarbrg",2)
 </script>
 </body>
