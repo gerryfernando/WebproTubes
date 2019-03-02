@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Toko Toko</title>
+    <link rel="stylesheet" type="text/css" href="CSS/ViewBarang.css">
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="JS/beranda.js"></script>
+    <script type="text/javascript" src="JS/ViewBarang.js"></script>
+
+  </head>
+  <body>
+      <div class="sidemenu" id="mysidemenu" style="width:0px">
+          <a href="javascript:void(0)" class="close" onclick="closesm()">&times;</a>
+          <div class="isisidemenu">
+              <a href="#">tops</a>
+              <a href="#">bottoms</a>
+              <a href="#">sales</a>
+              <a href="#">new arrival</a>
+          </div>
+      </div>
+
+      <div class="bagianatas" >
+          <div class="menu">
+              <ul>
+                  <!--&#9776-->
+                  <li><a class="navbutton" id="bukamenu" onclick="opensm()">tes</a></li>
+              </ul>
+          </div>
+          <header>
+              <div class="container" >
+                  <nav id="nav">
+                      <ul>
+                          <li><a href="#">Home</a></li>
+                          <li><a href="#">Sign in</a></li>
+                          <li><a href="#">services</a></li>
+                          <li><a href="#">cart</a></li>
+                      </ul>
+                  </nav>
+              </div>
+          </header>
+      </div>
+
+      <div>
+          <ul class="horizontal-list" id="reference">
+              <li><a href="google.com">123</a></li>
+              <li>></li>
+              <li><a href="google.com">123</a></li>
+              <li>></li>
+              <li><a href="google.com">123</a></li>
+          </ul>
+      </div>
+
+      <div class="view-basic">
+
+
+        <div class="view-barang-one">
+
+            <ul class="listObj">
+                <li><img class="listObj" src="img\jaket1.jpg" id="tempImage"></li>
+                <li><img class="listObj" src="img\jaket1.jpg" id="tempImage"></li>
+                <li><img class="listObj" src="img\jaket1.jpg" id="tempImage"></li>
+                <li><img class="listObj" src="img\jaket1.jpg" id="tempImage"></li>
+                <li><img class="listObj" src="img\jaket1.jpg" id="tempImage"></li>
+                <li><img class="listObj" src="img\jaket1.jpg" id="tempImage"></li>
+                <li><img class="listObj" src="img\jaket1.jpg" id="tempImage"></li>
+                <li><img class="listObj" src="img\jaket1.jpg" id="tempImage"></li>
+                <li><img class="listObj" src="img\jaket1.jpg" id="tempImage"></li>
+                <li><img class="listObj" src="img\jaket1.jpg" id="tempImage"></li>
+                <li><img class="listObj" src="img\jaket1.jpg" id="tempImage"></li>
+            </ul>
+
+        </div>
+        <div class="view-barang-one">
+          <div style="width: 300px;height: 460px;border: 2px solid #f0f3fb;">
+            <img class="show" src="img\jaket1.jpg" id="currentImage">
+          </div>
+        </div>
+        <div class="view-barang-one">
+          <h1 id="name">Nama barang</h1>
+          <h2 id="harga" style="color:#B22222">Harga : Rp.59.000</h2>
+          <h4>Description</h4>
+          <p id="shortDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots" style="display : inline;">...</span><span id="descriptionMore" style="display : none;">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+          <button class="button1" onclick="showAndHideDesc()" id="myBtn">Read more ▼</button>
+
+
+          <table style="margin-top: 30px;">
+            <tr>
+              <td><button class="button1" onclick="decrease()" id="decrease" style="width:50px; height:30px; font-family: sans-serif;font-size:22px">-</button></td>
+              <td><input class="button2" type="text" id="itemCount" value="1" style="text-align: center; width:85px; height:24px; font-family: sans-serif;" onkeypress='validate(event)'onchange="countValidate()"></input></td>
+              <td><button class="button1" onclick="add()" id="add" style="width:50px; height:30px; font-family: sans-serif;font-size:22px">+</button></td>
+
+            </tr>
+            <tr>
+              <td colspan="3"><button class="button1" onclick="addToChart()" style="width:200px; height:40px; font-family: sans-serif;font-size:18px">Add to Chart</button></td>
+              <td><button class="button1" onclick="addToWhistList()" id="add" style="width:60px; height:40px; font-family: sans-serif; font-size:22px">♥</button></td>
+            </tr>
+          </table>
+
+
+        </div>
+
+      </div>
+
+      <div style="background:#ffffff; width:87%;margin: auto;">
+        <div id="tab1" class="tab">
+          <button class="tablinks active" onclick="tabHandler(event,'Rincian','content1')">Rincian</button>
+          <button class="tablinks" onclick="tabHandler(event,'Ulasan','content1')">Ulasan</button>
+          <button class="tablinks" onclick="tabHandler(event,'Pertanyaan','content1')">Pertanyaan</button>
+        </div>
+        <div id="content1">
+          <div id="Rincian" class="tabcontent" style="display:block">
+            <h3>London</h3>
+            <p>London is the capital city of England.</p>
+          </div>
+
+          <div id="Ulasan" class="tabcontent" style="display:none">
+            <h3>Paris</h3>
+            <p>Paris is the capital of France.</p>
+          </div>
+
+          <div id="Pertanyaan" class="tabcontent" style="display:none">
+            <div class="InputChat">
+                <h4 style="padding-left:10px">Tulis Pertanyaan</h4>
+                <div style="width:100%">
+                  <textarea style="width:98%; padding: 0.9%; resize: none; height:80px; margin:0px; border-left:none;border-right:none;"></textarea>
+                </div>
+                <div style="width:100%; text-align:right;">
+                  <button class="button1" onclick="addComment()" style="width:10%;resize: none; height:40px;margin:10px;margin-top: 5px;border-radius:5px;">Kirim</button>
+                </div>
+            </div>
+            <div id="pertanyaanHolder" class="Massage">
+              <div class="InputChat">
+                <h5  style="padding-left:10px" id="name">Nama User</h5>
+                <p  style="padding-left:10px; font-size:12px;" id="question">Pertanyaan ke   1</p>
+                <div style="text-align:right; background-color:#dde">
+                  <div style="width:8%; height: 40px; padding-top: 3px; float:left;text-align:center;">
+                    <img src="img\jaket1.jpg" id="userImage" style="border-radius:100%; height:100%; min-height: 80%; width:50%;vertical-align: middle;">
+                  </div>
+                  <textarea id="comment" onfocus="commentOn(this);" style="padding: 0.9%; resize: none; width:89%; height:15px; margin-top:5px;
+                   margin-right:5px;"></textarea>
+
+                   <div id="btnSend" style="width:100%; text-align:right;display:none;">
+                     <button onclick="sendComment(this)" class="button1" style="width:8%;resize: none; height:30px;margin:10px;margin-top: 5px;border-radius:5px;">Kirim</button>
+                   </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+  </body>
+</html>
