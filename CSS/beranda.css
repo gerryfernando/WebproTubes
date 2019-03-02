@@ -1,167 +1,29 @@
 
 /*-------------------------------------------------------------------------------------------------------*/
-body {
-    margin: 0;
-    background: #f9f9f9;
-    font-family: sans-serif;
+@font-face {
+    font-family: fontbrand;
+    src: url('Botalies Kagetan.otf')
 }
 
-
-.container {
-    width: 80%;
-    margin: 0 auto;
+.navbar {
+    background-color: #646c77;
 }
 
-.bagianatas {
-    background-image: url(img\bg.jpg);
-    background-size: cover;
-}
-
-/*--------------------------------------------------------------------------------------------------------*/
-.isisidemenu {
-    margin-top:  50px;
-}
-
-.sidemenu {
-    height: 100%;
-    width: 300px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #55d6aa;
-    overflow-x: hidden;
-    white-space: nowrap;
-    transition: 0.5s;
-    padding-top: 60px;
-    
-}
-
-.sidemenu a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    color: #444;
-    display: block;
-    letter-spacing: 5px;
-    margin-bottom: 20px;
-    transition: 0.3s;
+.navbar-brand {
+    font-size: 30px !important;
+    font-family: fontbrand;
     text-transform: uppercase;
 }
 
-.sidemenu .close {
-    position: absolute;
-    top : 0;
-    right : 25px;
-    font-size: 30px;
-    border: none;
-    outline: none;
-    margin-left: 50px;
-}
-.isisidemenu a:after {
-    z-index: -1;
-    position: absolute;
-    left: 0%;
-    width: 0;
-    height: 20px;
-    background: #444;
-    content: '';
-    transition: width 0.35s ease-in-out;
+.besar_logo {
+    width: 20%;
 }
 
-.isisidemenu a:hover::after {
-    width: 10%;
-}
-
-.isisidemenu a:hover {
-    padding-left: 64px;
-    transition: 0.35s ease-in-out;
-}
-/*--------------------------------------------------------------------------------------------------------*/
-.menu {
-    float: left;
-}
-
-.menu ul {
-    margin: 0;
-    padding: none;
-    list-style-type: none;
-}
-
-.menu li {
-    padding-top: 5px;
-}
-
-.menu a {
-    color: #444;
-    text-decoration: none;
-    font-size: 30px;
-    cursor: pointer;
-}
-/*--------------------------------------------------------------------------------------------------------*/
-header {
-    background: #55d6aa;
-}
-
-header::after {
-    content: '';
-    display: table;
-    clear: both;
-}
-/*--------------------------------------------------------------------------------------------------------*/
-nav {
-    float: right;
-    display: fixed;
-}
-
-nav ul {
-    margin: 0;
-    padding: none;
-    list-style-type: none;
-}
-
-nav li {
-    display: inline-block;
-    margin-left : 70px;
-    padding-top: 18px;
-    padding-bottom: 10px;
-    position: relative;
-}
-
-nav a {
-    color: #444;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 14px;
-}
-
-nav a:hover {
-    color: #000;
-}
-
-nav a::before {
-    content: '';
-    display: block;
-    height: 5px;
-    width: 0%;
-    background-color: #444;
-    top: 0;
-    position: absolute;
-    transition: all ease-in-out 250ms;
-}
-
-nav a:hover::before {
-    width: 100%;
-}
 
 /*--------------------------------------------------------------------------------------------------------*/
 
-.box{
-    width: 80%;
-    height: 2000px;
-    background: #e5e8ec;
-    margin: 0px auto;
+/*--------------------------------------------------------------------------------------------------------*/
 
-}
 
 
 

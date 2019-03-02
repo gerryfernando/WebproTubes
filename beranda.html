@@ -2,44 +2,38 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="css/beranda.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"
         <meta charset="UTF-8">
-        <script type="text/javasript" src="jquery-3.3.1.js"></script>
-        <script src="js/beranda.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="js/beranda.js"></script>
         <title>Brader Style</title>
     </head>
     <body>
-        <div class="sidemenu" id="mysidemenu" style="width: 0px;">
-            <a href="javascript:void(0)" class="close" onclick="closesm()">&times;</a>
-            <div class="isisidemenu">
-                <a href="#">tops</a>
-                <a href="#">bottoms</a>
-                <a href="#">sales</a>
-                <a href="#">new arrival</a>
-            </div>
-        </div>
         <!-------------------------------------------------------------------------------------------------------------------------------------->
-        <div class="bagianatas" >
-            <div class="menu">
-                <ul>
-                    <li><a class="navbutton" id="bukamenu" onclick="opensm()">&#9776</a></li>
-                </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark  sticky-top">
+            <div class="besar_logo">
+                <a class="navbar-brand" href="#"><img class="logo" src="img/logo.png" width="70" height="50" alt="">&nbsp; Brader Style</a>
             </div>
-            <header>
-                <div class="container" >
-                    <nav id="nav">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Sign in</a></li>
-                            <li><a href="#">services</a></li>
-                            <li><a href="#">cart</a></li>
-                        </ul>
-                    </nav>
-                </div> 
-            </header>
-        <!--<div class="kotakdiskon">
-            <img src="IMG/bg.jpg" class="diskon">
-        </div>-->
-        </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
         <div class="main">
             <div class="box"></div>
         </div>

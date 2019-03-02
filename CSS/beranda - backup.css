@@ -1,66 +1,8 @@
 
-body{
-  background-color: #ddd;
-}
-.deskripsibarang{
-  
-
-}
-
-h4{
-  padding-top: 2em;
-  padding-left: 3em;
-  padding-bottom: 1em;
-  width: 150px;
-}
-#apaaja{
-  background-color: white;
-  width: 300px;
-  height: 350px;
-}
-#apaaja2{
-  background-color: #e9e9e9;
-  width: 1000px;
-  height: 350px;
-}
-
-
-#gambarbrg{
-  width: 350px;
-  height: 350px;
-
-}
-.gambar{
-    position: relative;
-    padding-right: 3em;
-
-}
-.gambar-glass{
-   position: absolute;
-  border: none;
-  cursor: none;
-  border-radius: 50%;
-  /*Set the size of the magnifier glass:*/
-  width: 80px;
-  height: 80px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*-------------------------------------------------------------------------------------------------------*/
 body {
     margin: 0;
+    background: #222;
     font-family: sans-serif;
 }
 
@@ -82,7 +24,7 @@ body {
 
 .sidemenu {
     height: 100%;
-    width: 300px;
+    width: 0px;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -122,6 +64,7 @@ body {
     width: 0;
     height: 20px;
     background: #444;
+    text-decoration: none;
     content: '';
     transition: width 0.35s ease-in-out;
 }
@@ -133,10 +76,11 @@ body {
 .isisidemenu a:hover {
     padding-left: 64px;
     transition: 0.35s ease-in-out;
+    text-decoration: none;
 }
 /*--------------------------------------------------------------------------------------------------------*/
 .menu {
-    float: left;
+    float: left;                /* tombol menu*/
 }
 
 .menu ul {
@@ -152,7 +96,7 @@ body {
 .menu a {
     color: #444;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 20px;
     cursor: pointer;
 }
 /*--------------------------------------------------------------------------------------------------------*/
@@ -193,11 +137,13 @@ nav a {
 
 nav a:hover {
     color: #000;
+    text-decoration: none;
 }
 
 nav a::before {
     content: '';
     display: block;
+    text-decoration: none;
     height: 5px;
     width: 0%;
     background-color: #444;
@@ -208,17 +154,12 @@ nav a::before {
 
 nav a:hover::before {
     width: 100%;
+    text-decoration: none;
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
 
-.box{
-    width: 80%;
-    height: 2000px;
-    background: white;
-    margin: 0px auto;
 
-}
 
 
 
