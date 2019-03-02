@@ -1,5 +1,4 @@
-
-
+/// this for first Block
 function showAndHideDesc() {
   var dots = document.getElementById("dots");
   var moreText = document.getElementById("descriptionMore");
@@ -74,7 +73,7 @@ function countValidate() {
     count.value = 0;
   }
 }
-
+/// this for Tab Pertanyaan
 let lastTarget = null;
 function tabHandler(evt,nameid,contentid){
     if(lastTarget == evt.currentTarget){
@@ -133,21 +132,24 @@ function sendComment(commentTab){
 }
 $.get( "https://tubeswebpro-backend.herokuapp.com/api/users/user002", function( data  , status , xhr) {
     console.log(data);
-    let pertanyaan = $("#pertanyaanHolder").load("html/pertanyaan.html");
-    $("#pertanyaanHolder").append(pertanyaan);
+
 });
 
 function addComment(){
     let pertanyaan = document.getElementById("pertanyaanHolder");
-    console.log(pertanyaan);
+
     let file = "html/pertanyaan.html";
     if (file) {
       /* Make an HTTP request using the attribute value as the file name: */
       xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
         if (this.readyState == 4) {
-          if (this.status == 200) {pertanyaan.innerHTML += this.responseText;}
-          if (this.status == 404) {pertanyaan.innerHTML += "Page not found.";}
+          if (this.status == 200) {
+            let objPertanyaan = $(this.responseText);
+            console.log(objPertanyaan);
+            pertanyaan.insertBefore(objPertanyaan);
+          }
+          if (this.status == 404) {pertanyaan.innerHTML = "Page not found.";}
         }
       }
       xhttp.open("GET",file, true);

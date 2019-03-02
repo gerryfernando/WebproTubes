@@ -236,6 +236,23 @@ img.listObj{
   color: white;
 }
 
+.button3 {
+  background-color: inherit;
+  color: black;
+  width: 100%;
+  border: 0px;
+  border-top: 1px solid #ccc;
+}
+
+.button3:hover {
+  background-color: #dddddd;
+  color: black;
+}
+.button3:active {
+  background-color: #aaaaaa;
+  color: black;
+}
+
 .button2 {
   background-color: white;
   color: black;
