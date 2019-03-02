@@ -1,0 +1,51 @@
+
+body{
+	background : #F1F3FA;
+	margin: 0 auto;
+}
+.container{
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+}
+.row{
+	margin: 20px 0;
+	text-align: center;
+	height: 70%;
+
+}
+.col-lg-9{
+	padding: 20px 0 10px 0;
+	background-color: #f1f1f1;
+	text-align: center;
+	height: 700px;
+	margin: 0 auto;
+}
+
+
+.box{
+	padding: 20px 0 10px 0;
+	background-color: #f1f1f1;
+	text-align: center;
+	height: 700px;
+	margin: 0 auto;
+}
+.profile-pic img{
+	float: none;
+	margin: 0 auto;
+	width: 15%;
+	height: 15%;
+	border-radius: 100%; 
+}
+.profile-name{
+	text-align: center;
+	margin-top: 20px;
+}
+.input-group{
+	padding-top: 20px;
+	padding-left: 70px;
+	padding-right: 70px;
+}
+.input-group > span{
+	width: 100px;
+}

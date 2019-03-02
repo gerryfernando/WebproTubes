@@ -2,7 +2,7 @@
 /*-------------------------------------------------------------------------------------------------------*/
 body {
     margin: 0;
-    background: #222;
+    background: #f9f9f9;
     font-family: sans-serif;
 }
 
@@ -110,6 +110,7 @@ header::after {
 /*--------------------------------------------------------------------------------------------------------*/
 nav {
     float: right;
+    display: fixed;
 }
 
 nav ul {
@@ -157,7 +158,7 @@ nav a:hover::before {
 .box{
     width: 80%;
     height: 2000px;
-    background: green;
+    background: #e5e8ec;
     margin: 0px auto;
 
 }
