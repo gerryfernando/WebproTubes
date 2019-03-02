@@ -2,46 +2,117 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="css/beranda.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"
         <meta charset="UTF-8">
-        <script type="text/javasript" src="jquery-3.3.1.js"></script>
-        <script src="js/beranda.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="js/beranda.js"></script>
+        <link rel="stylesheet" href="css/style side bar.css">
+        <!-- Scrollbar Custom CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+        <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
         <title>Brader Style</title>
     </head>
     <body>
-        <div class="sidemenu" id="mysidemenu">
-            <a href="javascript:void(0)" class="close" onclick="closesm()">&times;</a>
-            <div class="isisidemenu">
-                <a href="#">tops</a>
-                <a href="#">bottoms</a>
-                <a href="#">sales</a>
-                <a href="#">new arrival</a>
+        <!--------------------------------------------------------NAVIGATION BAR------------------------------------------------------------------------------>
+        <nav class="navbar navbar-expand-lg navbar-dark  sticky-top">
+            <div class="besar_logo">
+                <a class="navbar-brand" href="#"><img class="logo" src="img/logo.png" width="70" height="50" alt="">&nbsp; Brader Style</a>
             </div>
-        </div>
-        <!-------------------------------------------------------------------------------------------------------------------------------------->
-        <div class="bagianatas" >
-            <div class="menu">
-                <ul>
-                    <li><a class="navbutton" id="bukamenu" onclick="opensm()">&#9776</a></li>
-                </ul>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="#">Sign In</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+              </ul>
             </div>
-            <header>
-                <div class="container" >
-                    <nav id="nav">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Sign in</a></li>
-                            <li><a href="#">services</a></li>
-                            <li><a href="#">cart</a></li>
+            <button type="button" id="sidebarCollapse" class="navbar-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-align-justify"></i>
+                </button>  
+        </nav>      
+           <!-----------------------------------------------END OF NAVIGATION BAR--------------------------------------------------------------------------------------->
+        <!--------------------------------------------------------SIDE BAR------------------------------------------------------------------------------>
+        <div class="wrapper">
+                <!-- Sidebar -->
+                <nav id="sidebar">
+                        <div class="sidebar-header">
+                            <h3>Bootstrap Sidebar</h3>
+                        </div>
+            
+                        <ul class="list-unstyled components">
+                            <p>Dummy Heading</p>
+                            <li class="active">
+                                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                                <ul class="collapse list-unstyled" id="homeSubmenu">
+                                    <li>
+                                        <a href="#">Home 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Home 2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Home 3</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">About</a>
+                                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                                <ul class="collapse list-unstyled" id="pageSubmenu">
+                                    <li>
+                                        <a href="#">Page 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Page 2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Page 3</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact</a>
+                            </li>
                         </ul>
                     </nav>
-                </div> 
-            </header>
-        <!--<div class="kotakdiskon">
-            <img src="IMG/bg.jpg" class="diskon">
-        </div>-->
-        </div>
+            </div>
+        <!--------------------------------------------------------END OF SIDE BAR------------------------------------------------------------------------------>
         <div class="main">
-            <div class="box"></div>
+            
         </div>
+     <!-- Popper.JS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+     <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!--------------------------------------------------------SCRIPT------------------------------------------------------------------------------>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+        });
+    </script>
     </body>
 </html>

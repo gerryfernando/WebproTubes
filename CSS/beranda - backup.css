@@ -1,17 +1,17 @@
 
 /*-------------------------------------------------------------------------------------------------------*/
-@font-face {
-    font-family: fontbrand;
-    src: url('Botalies Kagetan.otf')
+body {
+    margin: 0;
+    background: #222;
+    font-family: sans-serif;
 }
 
-/*------------------------------------NAV BAR-------------------------------------------------------------------*/
 
-.navbar {
-    background-color: #646c77;
+.container {
+    width: 80%;
+    margin: 0 auto;
 }
 
-<<<<<<< HEAD
 .bagianatas {
     background-image: url(img\bg.jpg);
     background-size: cover;
@@ -24,7 +24,7 @@
 
 .sidemenu {
     height: 100%;
-    width: 300px;
+    width: 0px;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -34,7 +34,7 @@
     white-space: nowrap;
     transition: 0.5s;
     padding-top: 60px;
-
+    
 }
 
 .sidemenu a {
@@ -45,27 +45,58 @@
     letter-spacing: 5px;
     margin-bottom: 20px;
     transition: 0.3s;
-=======
-.navbar-brand {
-    font-size: 30px !important;
-    font-family: fontbrand;
->>>>>>> 63facba191603ad4dae832cbcad53825a6bbafbf
     text-transform: uppercase;
 }
 
-.besar_logo {
-    width: 20%;
+.sidemenu .close {
+    position: absolute;
+    top : 0;
+    right : 25px;
+    font-size: 30px;
+    border: none;
+    outline: none;
+    margin-left: 50px;
+}
+.isisidemenu a:after {
+    z-index: -1;
+    position: absolute;
+    left: 0%;
+    width: 0;
+    height: 20px;
+    background: #444;
+    text-decoration: none;
+    content: '';
+    transition: width 0.35s ease-in-out;
 }
 
-/*----------------------------------------END OF NAVBAR---------------------------------------------------------------*/
+.isisidemenu a:hover::after {
+    width: 10%;
+}
 
+.isisidemenu a:hover {
+    padding-left: 64px;
+    transition: 0.35s ease-in-out;
+    text-decoration: none;
+}
+/*--------------------------------------------------------------------------------------------------------*/
+.menu {
+    float: left;                /* tombol menu*/
+}
 
+.menu ul {
+    margin: 0;
+    padding: none;
+    list-style-type: none;
+}
 
-<<<<<<< HEAD
+.menu li {
+    padding-top: 5px;
+}
+
 .menu a {
     color: #444;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 20px;
     cursor: pointer;
 }
 /*--------------------------------------------------------------------------------------------------------*/
@@ -106,11 +137,13 @@ nav a {
 
 nav a:hover {
     color: #000;
+    text-decoration: none;
 }
 
 nav a::before {
     content: '';
     display: block;
+    text-decoration: none;
     height: 5px;
     width: 0%;
     background-color: #444;
@@ -121,18 +154,11 @@ nav a::before {
 
 nav a:hover::before {
     width: 100%;
+    text-decoration: none;
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
 
-.box{
-    width: 80%;
-    height: 2000px;
-    background: green;
-    margin: 0px auto;
-
-}
-=======
 
 
 
@@ -145,4 +171,4 @@ nav a:hover::before {
 
 
 
->>>>>>> 63facba191603ad4dae832cbcad53825a6bbafbf
+
