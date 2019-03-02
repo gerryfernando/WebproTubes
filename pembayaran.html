@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="CSS/Pembayaran.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<title>page cart</title>
+</head>
+<body>
+	<h1>Shopping Cart</h1>
+	<div class="container" id="box1">
+		<div class="row">
+		    <div class="col">
+		    	<div class="row">
+		    		<div class="col" id="total1">Order Total</div>
+		    		<div class="col" id="jumlah1">Rp.123</div>
+		    	</div>
+		    	<div class="row">
+		    	</div>
+		    </div>
+		    <div class="col">
+		    	<table>
+		    		<tr>
+		    			<td><button type="button" id="btn1">Checkout</button></td>
+		    		</tr>
+		    	</table>
+		    </div>
+		</div>
+	</div><br>
+	<div>
+		<center>
+			<table id="tabel1">
+				<tr id="row1">
+					<th></th>
+	    			<th id=teks1>PRODUCT</th>
+	    			<th id=teks2>UNIT PRICE</th>
+	    			<th id=teks3>QUANTITY</th>
+	    			<th id=teks4>TOTAL</th>
+	  			</tr>
+	  			<tr>
+	  				<td><img src="img/jaket1.jpg" style="width: 200px;height: 220px"></td><!--GambarProduk-->
+	  				<td>Nama Produk</td> 
+	  				<td>harga barang</td>
+	  				<td>
+	  					<button type="button">-</button><!--bikin js decrement-->
+	  					<input type="number" name="qty" id="qtybarang" value="1">
+	  					<button type="button">+</button><!-- bikin js increment-->
+	  				</td>
+	  				<td>Rp.99.000(total harga)</td><!--harga dari barang yang sudah dipilih-->
+	  				<td><p1 id="hapus"><a href="https://www.w3schools.com/html/">REMOVE</a></p1> <!--bikin apabila di klik bakal ke remove-->	
+	  				</td>
+	  			</tr>
+	  		</table>
+	  	</center>
+	</div><br><br>
+		<div class="container">
+			<div class="row">
+				<div class="col" id="FormAlamat">
+					<center><br>
+						<p id="txAddress">Form Address</p>
+						<textarea rows="4" cols="50"></textarea>
+					</center>
+				</div>
+				<div class="col" id="kosong">
+				</div>
+				<div id="paymentBox"><br>
+					<h3 id="ordersummary">ORDER SUMMARY</h3><br>
+					<div>
+						<div class="container" id="paymentBox1">
+							<div class="row">
+								<div class="col-sm-8">Item Subtotal</div>
+								<div class="col-sm-4">Rp.99.000</div><!--Total Harga-->
+								<div class="col-sm-8">*Shipping</div>
+								<div class="col-sm-4">Free</div><!--ongkir-->
+								<div class="col-sm-8">Tax</div>	
+								<div class="col-sm-4">Rp.0</div>
+								<p2 class="col-6 col-sm-3">Courier</p2>
+								<select class="col-6 col-sm-3" id="Kurir">
+									<option value="jne">JNE</option>
+									<option value="tiki">TIKI</option>
+									<option value="pos">POS INDONESIA</option>
+									<option value="j&t">J&T</option>
+								</select>
+							</div><br>
+						</div><br>
+						<div class="container" id="ordertotalbawah">
+							<div class="row">
+									<div class="col-sm-8"><b>Order Total</b></div>
+									<div class="col-sm-4"><b>Rp.99.999</b></div>
+							</div><br>
+						</div>
+					</div><br>
+					<center>
+						<div id="p2">*Shipping and tax are calculated after the shipping step is completed</div><br>
+						<center>
+							<button type="button">CHECKOUT</button><br>
+							<p3>OR</p3><br>
+							<button type="button">PAYPAL</button>
+							<br><br>
+						</center>
+					</center>
+						<center>
+							<input type="text" placeholder="APPLY A PROMO CODE">
+							<submit type="button">Apply</submit>
+						</center><br>
+				</div>
+			</div>
+		</div><br>
+</body>
+</html>
