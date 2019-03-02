@@ -1,1 +1,1 @@
-include('ViewBarang.html');
+<?php header( 'Location: /ViewBarang.html' ) ;  ?>
