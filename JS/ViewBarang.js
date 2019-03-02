@@ -133,11 +133,26 @@ function sendComment(commentTab){
 }
 $.get( "https://tubeswebpro-backend.herokuapp.com/api/users/user002", function( data  , status , xhr) {
     console.log(data);
-    $("#pertanyaanHolder").append("html/pertanyaan.html");
+    let pertanyaan = $("#pertanyaanHolder").load("html/pertanyaan.html");
+    $("#pertanyaanHolder").append(pertanyaan);
 });
 
 function addComment(){
     let pertanyaan = document.getElementById("pertanyaanHolder");
     console.log(pertanyaan);
-    $("#pertanyaanHolder").append("html/pertanyaan.html");
+    let file = "html/pertanyaan.html";
+    if (file) {
+      /* Make an HTTP request using the attribute value as the file name: */
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {pertanyaan.innerHTML += this.responseText;}
+          if (this.status == 404) {pertanyaan.innerHTML += "Page not found.";}
+        }
+      }
+      xhttp.open("GET",file, true);
+      xhttp.send();
+      /* Exit the function: */
+      return;
+    }
 }
