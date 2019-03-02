@@ -11,7 +11,7 @@
     background-color: #646c77;
 }
 
-<<<<<<< HEAD
+
 .bagianatas {
     background-image: url(img\bg.jpg);
     background-size: cover;
@@ -45,11 +45,7 @@
     letter-spacing: 5px;
     margin-bottom: 20px;
     transition: 0.3s;
-=======
-.navbar-brand {
-    font-size: 30px !important;
-    font-family: fontbrand;
->>>>>>> 63facba191603ad4dae832cbcad53825a6bbafbf
+
     text-transform: uppercase;
 }
 
@@ -61,7 +57,6 @@
 
 
 
-<<<<<<< HEAD
 .menu a {
     color: #444;
     text-decoration: none;
@@ -132,17 +127,3 @@ nav a:hover::before {
     margin: 0px auto;
 
 }
-=======
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> 63facba191603ad4dae832cbcad53825a6bbafbf
