@@ -133,11 +133,11 @@ function sendComment(commentTab){
 }
 $.get( "https://tubeswebpro-backend.herokuapp.com/api/users/user002", function( data  , status , xhr) {
     console.log(data);
-    $("#pertanyaanHolder").load("html/pertanyaan.html");
+    $("#pertanyaanHolder").append("html/pertanyaan.html");
 });
 
 function addComment(){
     let pertanyaan = document.getElementById("pertanyaanHolder");
     console.log(pertanyaan);
-    $("#pertanyaanHolder").load("html/pertanyaan.html");
+    $("#pertanyaanHolder").append("html/pertanyaan.html");
 }
