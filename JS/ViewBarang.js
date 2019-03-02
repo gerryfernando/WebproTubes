@@ -147,7 +147,7 @@ function addComment(){
           if (this.status == 200) {
             let objPertanyaan = $(this.responseText);
             console.log(objPertanyaan);
-            pertanyaan.insertBefore(objPertanyaan);
+            pertanyaan.appendChild(objPertanyaan);
           }
           if (this.status == 404) {pertanyaan.innerHTML = "Page not found.";}
         }
