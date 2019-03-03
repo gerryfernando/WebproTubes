@@ -187,7 +187,7 @@ function getComment(element){
 }
 
 function addComment(objPertanyaan , name , comment){
-  let comment = objPertanyaan.parentElement.parentElement.querySelector("#comment-list");
+  let commentHolder = objPertanyaan.parentElement.parentElement.querySelector("#comment-list");
 
   let file = "html/komen.html";
   if (file) {
@@ -199,7 +199,7 @@ function addComment(objPertanyaan , name , comment){
           let komen = $(this.responseText);
           komen[0].querySelector("#name").innerHTML = name;
           komen[0].querySelector("#comment").innerHTML = comment;
-          comment.prepend(komen[0]);
+          commentHolder.prepend(komen[0]);
         }
         if (this.status == 404) {pertanyaan.innerHTML = "Page not found.";}
       }
