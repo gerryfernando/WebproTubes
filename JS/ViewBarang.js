@@ -130,12 +130,16 @@ function sendComment(commentTab){
   comment.value = "";
 
 }
-$.get( "https://tubeswebpro-backend.herokuapp.com/api/users/user002", function( data  , status , xhr) {
+$.get( "https://api.myjson.com/bins/1fk0pq", function( data  , status , xhr) {
     console.log(data);
-
+    for (var k in data){
+        if (typeof data[k] !== 'function') {
+             addPertanyaan(data[k].name , data[k].question);
+        }
+    }
 });
 
-function addComment(){
+function addPertanyaan(nama,pertanyaan){
     let pertanyaan = document.getElementById("pertanyaanHolder");
 
     let file = "html/pertanyaan.html";
@@ -146,7 +150,8 @@ function addComment(){
         if (this.readyState == 4) {
           if (this.status == 200) {
             let objPertanyaan = $(this.responseText);
-            console.log(objPertanyaan);
+            objPertanyaan.querySelector("#name").innerHTML = nama;
+            objPertanyaan.querySelector("#question").innerHTML = pertanyaan;
             pertanyaan.prepend(objPertanyaan[0]);
           }
           if (this.status == 404) {pertanyaan.innerHTML = "Page not found.";}
@@ -154,7 +159,11 @@ function addComment(){
       }
       xhttp.open("GET",file, true);
       xhttp.send();
-      /* Exit the function: */
       return;
     }
+}
+
+function addComment(objPertanyaan , nama , comment){
+
+
 }
