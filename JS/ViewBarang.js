@@ -140,14 +140,14 @@ function newQuestion(){
 //Load All Question
 $.get( "https://api.myjson.com/bins/nmsfy", function( data  , status , xhr) {
     document.getElementById("Rincian").querySelector("#textRincian").innerHTML = data["detail"];
-    for (var k in data["review"]){
-        if (typeof data[k] !== 'function') {
-            addReview(data[k].name , data[k].review);
+    for (var k in data.review){
+        if (typeof data.review[k] !== 'function') {
+            addReview(data.review[k].name , data.review[k].review);
         }
     }
-    for (var k in data["question"]){
-        if (typeof data[k] !== 'function') {
-            addQuestion(data[k].name , data[k].question , k);
+    for (var k in data.question){
+        if (typeof data.question[k] !== 'function') {
+            addQuestion(data.question[k].name , data.question[k].question , k);
         }
     }
 });
