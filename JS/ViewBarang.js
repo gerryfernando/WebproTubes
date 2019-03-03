@@ -175,6 +175,7 @@ function getComment(element){
       let commentList = element.parentElement.parentElement.querySelector("#comment-list");
       commentList.innerHTML = "";
       element.innerHTML = "Lihat balasan ▼"
+      return;
   }
 
   $.get( "https://api.myjson.com/bins/1fk0pq", function( data  , status , xhr) {
