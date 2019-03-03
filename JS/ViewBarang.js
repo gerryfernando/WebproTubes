@@ -140,17 +140,33 @@ function newQuestion(){
 //Load All Question
 $.get( "https://api.myjson.com/bins/fcv4u", function( data  , status , xhr) {
     document.getElementById("Rincian").querySelector("#textRincian").innerHTML = data["detail"];
+    if(!isEmpty(data.review)){
+      document.getElementById("Ulasan").innerHTML = "";
+    }
     for (var k in data.review){
         if (typeof data.review[k] !== 'function') {
             addReview(data.review[k].name , data.review[k].review);
         }
     }
+    if(!isEmpty(data.question)){
+      document.getElementById("pertanyaanHolder").innerHTML = "";
+    }
     for (var k in data.question){
         if (typeof data.question[k] !== 'function') {
+
             addQuestion(data.question[k].name , data.question[k].question , k);
         }
     }
 });
+function isEmpty(data) {
+
+    for(var key in data) {
+
+        return false;
+    }
+
+    return true;
+}
 
 addQuestion = function (name,question,key){
     let pertanyaan = document.getElementById("pertanyaanHolder");
