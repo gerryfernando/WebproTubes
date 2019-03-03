@@ -1,86 +1,154 @@
-<!DOCTYPE html>
 <html>
 <head>
+
 	<title>Registrasi</title>
-	<link rel="stylesheet" type="text/css" href="Registrasi.css">
-	<script type="text/javascript" src="Registrasi.js"></script>
+	<link rel="stylesheet" type="text/css" href="CSS/Registrasi.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+
+
 </head>
 <body>
+	<div class="nama" >
+		<label>LOGO</label>
+	</div>
+	
+	<div class="body">
+	<div class="regis" >
+		<label>Registrasi</label>
+	</div>
+	<div class="tab ">
+		<button id="a1"  onclick="cek1()">1.Data Diri</button>
+		<button id="a2" disabled onclick="tab2()">2.Username&<br>Password </button>
+		<button id="a3" disabled onclick="tab3()"> 3.Alamat</button>
+	</div>
+	<form >
+	<table >
+		
+		<tr>
+			<td><b><div name="data" style="display: block;">Nama</div></b></td>
+		</tr>
+		<tr>
+				<td <div name="data" ><input type="text" id="nama_reg"  required> </td></td>
+		</tr>
 
-	<h1 style="text-align: center"> Nama Website</h1>
-	<form style="align-self: center;"><table>
-		<tr>
-			<td>Nama</td>
-		</tr>
-		<tr>
-				<td > <input type="text" id="nama_reg" placeholder="Masukan Nama" required> </td>
-		</tr>
 		<tr>
 
 		</tr>
+		
+		<tr><td>
+		<div style="text-align:left;display: block;" name="data"><strong><label></label>Jenis Kelamin</label></strong></div>
+		</td>
+		</tr>
 		<tr>
-			<td>Username</td>
+			<td>
+        <div class="custom-control custom-radio custom-control-inline" name="data" style="display: block;">
+          <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" value="Laki-Laki" checked>
+          <label class="custom-control-label" for="customRadioInline1">Laki-Laki</label>
+        </div>
+    		</td>
+        </tr>
+        <tr>
+        	<td>
+        <div class="custom-control custom-radio custom-control-inline" name="data" style="display: block;">
+          <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input" value="Perempuan">
+          <label class="custom-control-label" for="customRadioInline2">Perempuan</label>
+        </div>
+    </td>
+    </tr>
+		<tr>
+			<td><b><div name="data" style="display: block;">Telepon</div></b></td>
+		</tr>
+		<tr>
+			<td > <div name="data" style="display: block;"><input type="text" id="telp_reg" required> </div></td>
+		</tr>
+		<tr>
+			<td><b><div name="data" style="display: block;">Email</div></b></td>
+		
+		</tr>
+		<tr>
+			<td > <div name="data" style="display: block;"><input type="text" id="email_reg"  required></div> </td>
+		</tr>
+		
+		<tr>
+			<td colspan="3" align="left">
+				<div name="data" style="display: block;">
+					<input onclick="b1()" type="submit" value="NEXT" >
+				</div>
+
+			</td>
+		</tr>
+		</div>
+		
+		<tr>	<td >
+					<div name="alamat" style="display: none;"><b>Alamat</b>
+					</div>
+				</td>
+		</tr>
+		<tr>
+			
+			<td >
+			<div name="alamat" style="display: none; "> <textarea id="alamat_reg" style="width: 75%;height: 100px;resize: none; " required ></textarea> 
+			</div></td>
+			
+		</tr>
+		<tr>
+			<td>
+				<div class="jarak"></div>
+			</td>
+		</tr>
+	
+		<tr>
+			
+			
+			<td colspan="3" align="left">
+				<div name="alamat" style="display: none;">
+				<input onclick="b3()" type="submit" value="Selesai">
+				</div>
+			</td>
+			
+		</tr>
+	
+		<tr>
+			<td><b>
+			<div name="user" style="display: none;">Username
+			</div></b></td>
 			<td>:</td>
 			
 		</tr>
 		<tr>
-			<td > <input type="text" id="user_reg" placeholder="Masukan Username" required> </td>
+			<td >
+			<div name="user" style="display: none;">
+			 <input type="text" id="user_reg"  required>
+			 </div> </td>
 		</tr>
 
 		<tr>
-			<td>Password</td>
+			<td><b><div name="user" style="display: none;">Password</div></b></td>
 		</tr>
 		<tr>
-			<td > <input type="Password" id="pass_reg" placeholder="Masukan Password" required> </td>
+			<td > <div name="user" style="display: none;"><input type="Password" id="pass_reg"  required> </div></td>
 		</tr>
-		<tr>
-			<td>Jenis Kelamin</td>
-		</tr>
-		<tr>
-			<td > <input type="radio" name="JK" >Laki-Laki</td>
-		</tr>
-		<tr>
-			<td>
-				<input type="radio" name="JK">Perempuan
-			</td>
-		</tr>
-		<tr>
-			<td>Telepon</td>
-		</tr>
-		<tr>
-			<td > <input type="text" id="telp_reg" placeholder="Masukan No Telepon" required> </td>
-		</tr>
-		<tr>
-			<td>Email</td>
-		
-		</tr>
-		<tr>
-			<td > <input type="text" id="email_reg" placeholder="Masukan Email" required> </td>
-		</tr>
-		<tr>
-			<td>Alamat</td>
-		</tr>
-		<tr>
-			<td > <textarea id="alamat_reg" style="width: 300px;height: 50px;resize: none; " placeholder="Masukan Alamat" required ></textarea> </td>
-		</tr>
-	
-		<tr>
-			<td colspan="3" align="right">
-				<button  >Cancel</button>
-				<input type="submit" value="SUBMIT" >
+		<tr style="margin-top: 2em;">
+			<td colspan="3" align="left" >
+				<div name="user" style="display: none;">
+				<input  onclick="b2()" type="submit" value="NEXT" >
+			</div>
 
 			</td>
 		</tr>
+
 	</table>
+
 </form>
-
-	
+</div>
 </body>
-</html>
-
 <script >
-	
-	
-
-
+	document.getElementById("a1").style.backgroundColor="grey	";
+	document.getElementById("a2").style.backgroundColor="#262626";
+	document.getElementById("a3").style.backgroundColor="#262626";
 </script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="JS/Registrasi.js"></script>
+</html>
