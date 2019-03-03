@@ -135,12 +135,12 @@ $.get( "https://api.myjson.com/bins/1fk0pq", function( data  , status , xhr) {
     for (var k in data){
         if (typeof data[k] !== 'function') {
             console.log("tes");
-            addPertanyaan(data[k].name , data[k].question);
+            addQuestion(data[k].name , data[k].question);
         }
     }
 });
 
-function addPertanyaan(nama,pertanyaan){
+addQuestion = function (nama,pertanyaan){
     let pertanyaan = document.getElementById("pertanyaanHolder");
 
     let file = "html/pertanyaan.html";
