@@ -140,6 +140,7 @@ function newQuestion(){
 //Load All Question
 $.get( "https://api.myjson.com/bins/fcv4u", function( data  , status , xhr) {
     document.getElementById("Rincian").querySelector("#textRincian").innerHTML = data["detail"];
+    console.log(data.review);
     if(!isEmpty(data.review)){
       document.getElementById("Ulasan").innerHTML = "";
     }
@@ -153,7 +154,6 @@ $.get( "https://api.myjson.com/bins/fcv4u", function( data  , status , xhr) {
     }
     for (var k in data.question){
         if (typeof data.question[k] !== 'function') {
-
             addQuestion(data.question[k].name , data.question[k].question , k);
         }
     }
