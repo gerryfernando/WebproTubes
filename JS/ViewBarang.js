@@ -34,8 +34,8 @@ $(document).ready(function(){
         var mouseY = e.pageY - parentOffset.top;
         var amountMovedX = img.width()*clamp(0,0.5,lerp(0 ,imgC.width(), mouseX )-0.25);
         var amountMovedY = img.height()*clamp(0,0.5,lerp(0 ,imgC.height(), mouseY )-0.1);
-        console.log(mouseX +" "+ mouseY);
-        console.log(amountMovedX +" "+ amountMovedY);
+        //console.log(mouseX +" "+ mouseY);
+        //console.log(amountMovedX +" "+ amountMovedY);
         img.css({
           top: -amountMovedY+'px',
           left : -amountMovedX+'px',
