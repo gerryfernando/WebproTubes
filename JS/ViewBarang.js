@@ -140,7 +140,7 @@ $.get( "https://api.myjson.com/bins/1fk0pq", function( data  , status , xhr) {
     }
 });
 
-addQuestion = function (nama,pertanyaan){
+addQuestion = function (name,question){
     let pertanyaan = document.getElementById("pertanyaanHolder");
 
     let file = "html/pertanyaan.html";
@@ -151,8 +151,8 @@ addQuestion = function (nama,pertanyaan){
         if (this.readyState == 4) {
           if (this.status == 200) {
             let objPertanyaan = $(this.responseText);
-            objPertanyaan.querySelector("#name").innerHTML = nama;
-            objPertanyaan.querySelector("#question").innerHTML = pertanyaan;
+            objPertanyaan.querySelector("#name").innerHTML = name;
+            objPertanyaan.querySelector("#question").innerHTML = question;
             pertanyaan.prepend(objPertanyaan[0]);
           }
           if (this.status == 404) {pertanyaan.innerHTML = "Page not found.";}
