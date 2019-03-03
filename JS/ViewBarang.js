@@ -151,10 +151,8 @@ addQuestion = function (name,question){
         if (this.readyState == 4) {
           if (this.status == 200) {
             let objPertanyaan = $(this.responseText);
-            console.log(objPertanyaan);
-            console.log(objPertanyaan.style);
-            objPertanyaan.querySelector("#name").innerHTML = name;
-            objPertanyaan.querySelector("#question").innerHTML = question;
+            objPertanyaan[0].querySelector("#name").innerHTML = name;
+            objPertanyaan[0].querySelector("#question").innerHTML = question;
             pertanyaan.prepend(objPertanyaan[0]);
           }
           if (this.status == 404) {pertanyaan.innerHTML = "Page not found.";}
