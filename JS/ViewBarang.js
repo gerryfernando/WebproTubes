@@ -134,7 +134,8 @@ $.get( "https://api.myjson.com/bins/1fk0pq", function( data  , status , xhr) {
     console.log(data);
     for (var k in data){
         if (typeof data[k] !== 'function') {
-             addPertanyaan(data[k].name , data[k].question);
+            console.log("tes");
+            addPertanyaan(data[k].name , data[k].question);
         }
     }
 });
