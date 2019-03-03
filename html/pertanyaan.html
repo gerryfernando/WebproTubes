@@ -1,4 +1,4 @@
-<div class="InputChat">
+<div class="InputChat" name="key">
   <div id="questionBlock">
     <h5  style="padding-left:4%;" id="name">Nama User</h5>
     <p  style="padding-left:4%; font-size:12px;" id="question">Pertanyaan ke   1</p>
@@ -6,12 +6,12 @@
   <div id="comment-list" >
   </div>
   <div style="text-align:center;">
-    <button class="button3">Lihat balasan ▼</button>
+    <button class="button3" onclick="getComment(this)">Lihat balasan ▼</button>
   </div>
 
   <div style="text-align:right; background-color:#dde">
     <div style="width:8%; height: 40px; padding-top: 3px; float:left;text-align:center;">
-      <img src="img\jaket1.jpg" id="userImage" style="border-radius:100%; height:100%; min-height: 80%; width:50%;vertical-align: middle;">
+      <img src="img\jaket1.jpg" onclick="getComment(this)" id="userImage" style="border-radius:100%; height:100%; min-height: 80%; width:50%;vertical-align: middle;">
     </div>
     <textarea id="comment" onfocus="commentOn(this);" style="padding: 0.9%; resize: none; width:89%; height:15px; margin-top:5px;
      margin-right:5px;"></textarea>

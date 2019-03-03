@@ -6,11 +6,11 @@ function showAndHideDesc() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "Read more ▼";
+    btnText.innerHTML = "Baca lebih ▼";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Read less ▲";
+    btnText.innerHTML = "Sembunyikan ▲";
     moreText.style.display = "inline";
   }
 }
@@ -101,9 +101,11 @@ function tabHandler(evt,nameid,contentid){
 
 let currentElement = null;
 function commentOn(element){
-  //console.log(element.parentElement.parentElement);
+
   if(currentElement != null){
     commentOff(currentElement);
+  }else if(currentElement == element){
+    return;
   }
   currentElement = element;
   element.style.height = '60px';
@@ -112,7 +114,7 @@ function commentOn(element){
 }
 
 function commentOff(element){
-  //console.log(element.parentElement.parentElement);
+
   element.style.height = '15px';
   element.parentElement.querySelector("#btnSend").style.display = 'none';
 }
@@ -124,23 +126,27 @@ function sendComment(commentTab){
   }
 
   let comment=commentTab.parentElement.parentElement.querySelector("#comment");
-  console.log(comment.value);
-
-
+  console.log("Mengirim");
+  //...
+  console.log("terkirim");
   comment.value = "";
 
 }
+
+function newQuestion(){
+  console.log("new Question Created")
+}
+
+//Load All Question
 $.get( "https://api.myjson.com/bins/1fk0pq", function( data  , status , xhr) {
-    console.log(data);
     for (var k in data){
         if (typeof data[k] !== 'function') {
-            console.log("tes");
-            addQuestion(data[k].name , data[k].question);
+            addQuestion(data[k].name , data[k].question , k);
         }
     }
 });
 
-addQuestion = function (name,question){
+addQuestion = function (name,question,key){
     let pertanyaan = document.getElementById("pertanyaanHolder");
 
     let file = "html/pertanyaan.html";
@@ -153,6 +159,7 @@ addQuestion = function (name,question){
             let objPertanyaan = $(this.responseText);
             objPertanyaan[0].querySelector("#name").innerHTML = name;
             objPertanyaan[0].querySelector("#question").innerHTML = question;
+            objPertanyaan[0].setAttribute("name",key);
             pertanyaan.prepend(objPertanyaan[0]);
           }
           if (this.status == 404) {pertanyaan.innerHTML = "Page not found.";}
@@ -163,8 +170,43 @@ addQuestion = function (name,question){
       return;
     }
 }
+function getComment(element){
+  if(element.innerHTML != "Lihat balasan ▼"){
+      let commentList = element.parentElement.parentElement.querySelector("#comment-list");
+      commentList.innerHTML = "";
+      element.innerHTML = "Lihat balasan ▼"
+  }
 
-function addComment(objPertanyaan , nama , comment){
+  $.get( "https://api.myjson.com/bins/1fk0pq", function( data  , status , xhr) {
+      for (var k in data){
+          if (typeof data[k] !== 'function') {
+              addComment(element, data[k].name , data[k].question);
+          }
+      }
+  });
+}
 
+function addComment(objPertanyaan , name , comment){
+  let comment = objPertanyaan.parentElement.parentElement.querySelector("#comment-list");
 
+  let file = "html/komen.html";
+  if (file) {
+    /* Make an HTTP request using the attribute value as the file name: */
+    xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4) {
+        if (this.status == 200) {
+          let komen = $(this.responseText);
+          komen[0].querySelector("#name").innerHTML = name;
+          komen[0].querySelector("#comment").innerHTML = comment;
+          comment.prepend(komen[0]);
+        }
+        if (this.status == 404) {pertanyaan.innerHTML = "Page not found.";}
+      }
+    }
+    xhttp.open("GET",file, true);
+    xhttp.send();
+    objPertanyaan.innerHTML = "Sembunyikan balasan ▲"
+    return;
+  }
 }
