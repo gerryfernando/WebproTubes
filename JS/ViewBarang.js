@@ -138,7 +138,7 @@ function newQuestion(){
 }
 
 //Load All Question
-$.get( "https://api.myjson.com/bins/nmsfy", function( data  , status , xhr) {
+$.get( "https://api.myjson.com/bins/fcv4u", function( data  , status , xhr) {
     document.getElementById("Rincian").querySelector("#textRincian").innerHTML = data["detail"];
     for (var k in data.review){
         if (typeof data.review[k] !== 'function') {
