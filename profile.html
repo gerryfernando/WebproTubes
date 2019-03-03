@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Profile</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/profile.css">
+	<link rel="stylesheet" type="text/css" href="css/beranda.css">
+	<script type="text/javascript" src="js/beranda.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/footer.css">
+
+</head>
+<body>
+
+	 <div class="sidemenu" id="mysidemenu" style="width: 0px">
+            <a href="javascript:void(0)" class="close" onclick="closesm()">&times;</a>
+            <div class="isisidemenu">
+                <a href="#">tops</a>
+                <a href="#">bottoms</a>
+                <a href="#">sales</a>
+                <a href="#">new arrival</a>
+            </div>
+        </div>
+        <!-------------------------------------------------------------------------------------------------------------------------------------->
+        <div class="bagianatas" >
+            <div class="menu">
+                <ul>
+                    <li><a class="navbutton" id="bukamenu" onclick="opensm()">&#9776</a></li>
+                </ul>
+            </div>
+            <header>
+                <div class="container" >
+                    <nav id="nav">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">services</a></li>
+                            <li><a href="#">cart</a></li>
+                            <li><a href="#">Logout</a></li>
+
+                        </ul>
+                    </nav>
+                </div> 
+            </header>
+        <!--<div class="kotakdiskon">
+            <img src="IMG/bg.jpg" class="diskon">
+        </div>-->
+        </div>
+	<div class="container">
+
+		<div class="row">
+			<div class="col-lg-9">
+				
+				<div class="middle">
+
+				<div class="profile-pic">
+					<img src="img/jaket1.jpg" class="img-thumbnail" alt="picture">
+				</div>
+				<div class="profile-name">
+					<h3 class="nama">Yulius</h3>
+				</div>
+				</div>
+				<div class="input-group flex-nowrap">
+					<div class="input-group-prepend">
+	    				<span class="input-group-text" id="addon-wrapping" style="width: 150px;"><strong>Username</strong></span>
+	  				</div>	
+	  				<input type="text" class="form-control" placeholder="Username" aria-label="	Username" aria-describedby="addon-wrapping" id="username" readonly>
+				</div>
+				<div class="input-group flex-nowrap">
+					<div class="input-group-prepend">
+	    				<span class="input-group-text" id="addon-wrapping" style="width: 150px;"><STRONG>Email</STRONG></span>
+	  				</div>	
+	  				<input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="addon-wrapping" id="email" readonly>
+				</div>
+				<div class="input-group flex-nowrap">
+					<div class="input-group-prepend">
+	    				<span class="input-group-text" id="addon-wrapping" style="width: 150px;"><STRONG>No. Telepon</STRONG></span>
+	  				</div>	
+	  				<input type="text" class="form-control" placeholder="Phone Number" aria-label="Email" aria-describedby="addon-wrapping" id="Phone" readonly>
+				</div>
+				<div class="input-group flex-nowrap">
+					<div class="input-group-prepend">
+	    				<span class="input-group-text" id="addon-wrapping" style="width: 150px;"><strong>Jenis Kelamin</strong></span>
+	  				</div>	
+	  				<input type="text" class="form-control" placeholder="Jenis Kelamin" aria-label="JenisKelamin" aria-describedby="addon-wrapping" id="jk" readonly>
+				</div>
+				<div class="input-group">
+ 					 <div class="input-group-prepend">
+ 	   					<span class="input-group-text" style="width: 150px;"><strong>Alamat</strong></span>
+		 	 		</div>
+					  <textarea class="form-control" aria-label="Alamat" placeholder="Alamat" readonly id="alamat" style="resize: none;" ></textarea>
+				</div>
+			
+		</div>
+	</div>
+</div>
+<!-- Footer -->
+<footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<h3>Tentang<span>Kami</span></h3>
+
+				<p class="footer-links">
+					<a href="http://fb.com">Firdi</a>
+					·
+					<a href="https://fb.com">Gerry</a>
+					·
+					<a href="https://fb.com">Irfan</a>
+					·
+					<a href="https://fb.com">Yovan</a>
+					·
+					<a href="https://fb.com/liusgivans">Lius</a>
+				</p>
+
+				<p class="footer-company-name"> IF-41-11 &copy; 2019</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa"></i>
+					<p><span><strong> Telkom University</strong></span> Jl.Telekomunikasi No. 1</p>
+				</div>
+
+				<div>
+					<i class="fa"></i>
+					<p>Bandung</p>
+				</div>
+
+				<div>
+					<i class="fa"></i>
+					<p><a href="https://telkomuniversity.ac.id">telkomuniversity.ac.id</a></p>
+
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>Tentang Website</span>
+					Website ini dibuat dengan tujuan menyelesaikan tugas pemrograman web.Kami mengumpulkan ide bersama dan mendapat beberapa inspirasi diambil dari website lain dan juga bootstrap.
+				</p>
+
+
+			</div>
+
+		</footer>
+  <!-- Footer -->
+	<script>
+
+			document.getElementById("alamat").placeholder = "Asrama Telkom";
+			document.getElementById("username").placeholder = "liuslangobelen";
+			document.getElementById("email").placeholder = "lius@gmail.com";
+			document.getElementById("jk").placeholder= "lelaki";
+			closesm();
+		
+	</script>
+</body>
+</html>
