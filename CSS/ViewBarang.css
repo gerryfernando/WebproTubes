@@ -2,8 +2,9 @@
 /*-------------------------------------------------------------------------------------------------------*/
 body {
     margin: 0;
-    background: #f0f0f0;
+    background: #f8f8f8;
     font-family: sans-serif;
+    color: #292c2f;
 }
 
 
@@ -163,8 +164,9 @@ nav a:hover::before {
 div.view-basic{
   padding: 10px;
   margin: auto;
-  width: 87%;
-
+  width: 85.5%;
+  margin-bottom: 2em;
+  background-color : #ffffff;
   height: 100%;
   display: flex;
   align-items:flex-start;
@@ -227,12 +229,13 @@ img.listObj{
 .button1 {
   background-color: white;
   color: black;
-  border: 2px solid #555555;
+  border: 2px solid #292c2f;
 }
 
 .button1:hover {
-  background-color: #555555;
+  background-color: #292c2f;
   color: white;
+  
 }
 
 .button3 {
@@ -240,11 +243,11 @@ img.listObj{
   color: black;
   width: 100%;
   border: 0px;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #292c2f;
 }
 
 .button3:hover {
-  background-color: #dddddd;
+  background-color: #292c2f;
   color: black;
 }
 .button3:active {
@@ -255,7 +258,7 @@ img.listObj{
 .button2 {
   background-color: white;
   color: black;
-  border: 2px solid #555555;
+  border: 2px solid #292c2f;
 }
 
 ::-webkit-scrollbar {
@@ -281,14 +284,17 @@ img.listObj{
 
 div.tab{
     height: 50px;
-    background-color: #ccc;
+    background-color: #292c2f;
 }
 div.tabcontent{
     padding: inherit;
-    background: #fbfbfb;
-    border: 1px solid #ccc;
+    background: #fff;
+    border-right: 1px solid #292c2f;
+    border-left: 1px solid #292c2f;
+    border-bottom: none;
     border-top: none;
     padding: 10px;
+
 }
 button.tablinks{
     width: 20%;
@@ -296,16 +302,17 @@ button.tablinks{
     background-color: inherit;
     border: 0px;
     float: left;
+    color:#ffffff;
     cursor: pointer;
 }
 /* Change background color of buttons on hover */
 button.tablinks:hover {
-  background-color: #ddd;
+  background-color: #70a0ef;
 }
 
 /* Create an active/current tablink class */
 button.tablinks.active {
-  background-color: #aaa;
+  background-color: #4383d3;
 }
 
 div.InputChat{

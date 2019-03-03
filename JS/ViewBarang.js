@@ -1,18 +1,71 @@
 /// this for first Block
 function showAndHideDesc() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("descriptionMore");
-  var btnText = document.getElementById("myBtn");
-
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
+  let desc = document.getElementById("desc");
+  let btnText = document.getElementById("myBtn");
+  if (btnText.innerHTML != "Baca lebih ▼") {
     btnText.innerHTML = "Baca lebih ▼";
-    moreText.style.display = "none";
+    $("#parentdesc").animate({  height: '53px' }, 500);
   } else {
-    dots.style.display = "none";
+
     btnText.innerHTML = "Sembunyikan ▲";
-    moreText.style.display = "inline";
+    $("#parentdesc").animate({  height: $('#desc').height() }, 500);
   }
+}
+
+$(document).ready(function(){
+  let imgC = $('#currentImage');
+  let img= imgC.clone();;
+
+  $('#currentImage').on({
+      mouseenter: function () {
+        img[0].style.zoom='2';
+        img[0].setAttribute("id","zoomImage");
+        img[0].setAttribute("src",imgC[0].getAttribute("src"));
+        imgC[0].parentElement.prepend(img[0]);
+      }
+
+  });
+
+  img.on(
+    {
+      mousemove: function (e) {
+        var parentOffset = $(this).parent().offset();
+        var mouseX = e.pageX - parentOffset.left;
+        var mouseY = e.pageY - parentOffset.top;
+        var amountMovedX = img.width()*clamp(0,0.5,lerp(0 ,imgC.width(), mouseX )-0.25);
+        var amountMovedY = img.height()*clamp(0,0.5,lerp(0 ,imgC.height(), mouseY )-0.1);
+        console.log(mouseX +" "+ mouseY);
+        console.log(amountMovedX +" "+ amountMovedY);
+        img.css({
+          top: -amountMovedY+'px',
+          left : -amountMovedX+'px',
+          position : 'relative'
+        });
+
+      },
+      mouseleave: function () {
+
+        //console.log(offset(img[0]));
+        img[0].style.zoom='0';
+        imgC[0].parentElement.removeChild(img[0]);
+      }
+    }
+  );
+
+});
+
+function clamp(min, max , val) {
+  return Math.min(Math.max(val, min), max);
+};
+
+function lerp(value1, value2, amount) {
+        return (amount - value1) / (value2 - value1);
+        //return value1 + (value2 - value1) * amount;
+}
+
+function changePhoto(element){
+  let currImage = document.getElementById("currentImage");
+  currImage.setAttribute("src" , element.querySelector("#tempImage").getAttribute("src") );
 }
 
 function add(){
@@ -76,12 +129,13 @@ function countValidate() {
 /// this for Tab Pertanyaan
 let lastTarget = null;
 function tabHandler(evt,nameid,contentid){
-    if(lastTarget == evt.currentTarget){
-      return;
-    }
     if(lastTarget ==null){
       lastTarget = document.getElementsByClassName("tablinks active")[0];
     }
+    if(lastTarget == evt.currentTarget){
+      return;
+    }
+
     lastTarget.className = "tablinks";
     lastTarget = evt.currentTarget;
     evt.currentTarget.className += " active";

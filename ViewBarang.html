@@ -21,7 +21,7 @@
           </div>
       </div>
 
-      <div class="bagianatas" >
+      <div class="bagianatas"  >
           <div class="menu">
               <ul>
                   <!--&#9776-->
@@ -57,22 +57,15 @@
         <div class="view-barang-one">
 
             <ul class="listObj">
-                <li><img class="listObj" src="img\jaket1.jpg" id="tempImage"></li>
-                <li><img class="listObj" src="img\jaket1.jpg" id="tempImage"></li>
-                <li><img class="listObj" src="img\jaket1.jpg" id="tempImage"></li>
-                <li><img class="listObj" src="img\jaket1.jpg" id="tempImage"></li>
-                <li><img class="listObj" src="img\jaket1.jpg" id="tempImage"></li>
-                <li><img class="listObj" src="img\jaket1.jpg" id="tempImage"></li>
-                <li><img class="listObj" src="img\jaket1.jpg" id="tempImage"></li>
-                <li><img class="listObj" src="img\jaket1.jpg" id="tempImage"></li>
-                <li><img class="listObj" src="img\jaket1.jpg" id="tempImage"></li>
-                <li><img class="listObj" src="img\jaket1.jpg" id="tempImage"></li>
-                <li><img class="listObj" src="img\jaket1.jpg" id="tempImage"></li>
+                <li><a onclick="changePhoto(this)"><img class="listObj" src="img\jaket1.jpg" id="tempImage"></a></li>
+                <li><a onclick="changePhoto(this)"><img class="listObj" src="img\laki.png" id="tempImage"></a></li>
+                <li><a onclick="changePhoto(this)"><img class="listObj" src="img\logo.png" id="tempImage"></a></li>
+                <li><a onclick="changePhoto(this)"><img class="listObj" src="img\jaket1.jpg" id="tempImage"></a></li>
             </ul>
 
         </div>
         <div class="view-barang-one">
-          <div style="width: 300px;height: 460px;border: 2px solid #f0f3fb;">
+          <div style="width: 300px;height: 460px;border: 2px solid #f0f3fb;overflow:hidden">
             <img class="show" src="img\jaket1.jpg" id="currentImage">
           </div>
         </div>
@@ -80,8 +73,12 @@
           <h1 id="name">Nama barang</h1>
           <h2 id="harga" style="color:#B22222">Harga : Rp.59.000</h2>
           <h4>Description</h4>
-          <p id="shortDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots" style="display : inline;">...</span><span id="descriptionMore" style="display : none;">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-          <button class="button1" onclick="showAndHideDesc()" id="myBtn"><strong>Baca lebih ▼</strong></button>
+          <div id="parentdesc" style="height: 53px;overflow-y: hidden;">
+            <p id="desc" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
+          </div>
+
+          <button class="button1" onclick="showAndHideDesc()" id="myBtn" style="margin-top:10px;"><strong>Baca lebih ▼</strong></button>
 
 
           <table style="margin-top: 30px;">
@@ -92,7 +89,7 @@
 
             </tr>
             <tr>
-              <td colspan="3"><button class="button1" onclick="addToChart()" style="width:200px; height:40px; font-family: sans-serif;font-size:18px"><strong>Add to Chart</strong></button></td>
+              <td colspan="3"><button class="button1" onclick="addToChart()" style="width:200px; height:40px; font-family: sans-serif;font-size:18px"><strong>Add to chart</strong></button></td>
               <td><button class="button1" onclick="addToWhistList()" id="add" style="width:60px; height:40px; font-family: sans-serif; font-size:22px"><strong>♥</strong></button></td>
             </tr>
           </table>
@@ -102,14 +99,14 @@
 
       </div>
 
-      <div style="background:#ffffff; width:87%;margin: auto;">
+      <div style="width:87%;margin: auto;">
         <div id="tab1" class="tab">
           <button class="tablinks active" onclick="tabHandler(event,'Rincian','content1')"><strong>Rincian</strong></button>
           <button class="tablinks" onclick="tabHandler(event,'Ulasan','content1')"><strong>Ulasan</strong></button>
           <button class="tablinks" onclick="tabHandler(event,'Pertanyaan','content1')"><strong>Pertanyaan</strong></button>
         </div>
         <div id="content1">
-          <div id="Rincian" class="tabcontent" style="display:block">
+          <div id="Rincian" class="tabcontent" style="display:block;border-left: 1px solid #5383d3;s">
             <p id="textRincian">Tidak ada rincian</p>
           </div>
 
