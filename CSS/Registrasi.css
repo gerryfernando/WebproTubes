@@ -1,6 +1,9 @@
+
 body{
 	background-color: #F4F6F9;
+	font-family: Arial;
 	margin: 0 auto;
+	background-image:url("bg.jpeg");
 }
 
 h1{
@@ -9,64 +12,117 @@ h1{
 }
 
 
+.nama{
+	width: 300px;
+	height: 75px;
+	font-size: 300%;
+	text-align: center;
+	margin: 0 auto;
+	border-style: solid;
+	margin-bottom: 1em;
+}
+
+.body{
+	height: 500px;
+	width: 50%;
+	background-color: rgba(90,190,182,0.4);
+	padding-left: 1em;
+	margin-bottom: 2em;
+}
+
+.
+.jarak{
+	height: 50px;
+}
+.tab button{
+	width: 32%;
+	height: 50px;
+	background-color: #262626;
+	border-top:none;
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
+	border-radius: 0px;
+	color: white;
+
+	float: left;
+	margin-bottom: 1em; 
+}
+
+.tab button:focus{
+	background-color: grey;
+	outline: none;
+}
+
+
+.regis{
+	width:50%;
+	height: 75px;
+	font: bold 250% arial, sans-serif;
+  background-color: #565656;
+  text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+  -webkit-background-clip: text;
+  padding-top: 1em;
+  padding-left: 1em;
+  margin-bottom: 1em;
+      }
+.tab{
+	width: 100%;
+	height: 50px;
+}
+
+
+input-placeholder,textarea-placeholder{
+	color: #ddd;
+}
 
 input[type=text],input[type=password]{
-	border-bottom-color: #55d6AA;
-	background-color: #F4F6F9;
+	border-bottom-color: black;
+	background-color: transparent;
 	border-top: none;
 	border-right: none;
 	border-left: none;
-	width: 300px;
+	width: 70%;
 	height: 30px;
 	border-radius: 3px;
-	font-family: times new roman;
+
+	
 
 }
 textarea{
 	border-color: #CBD0D8;
-	background-color: #F4F6F9;
-	width: 300px;
-	height: 30px;
+	background-color: transparent;
 	border-radius: 3px;
-	font-family: times new roman;
 
 }
  
 
 input[type=submit]{
-	background-color:#32CD32 ;
-	border-radius: 7px;
+	background-color:inherit; 
+	color : #262626;
+	font-weight: bold;
+	border-radius: 5px;
 	height: 30px;
 	width: 100px;
-	border-color: black;
+	border: 3px solid #262626;
+	margin-top: 2em;
 
 
 }
 table{
-	margin: 0 auto;
+	padding: 3em;
+	width: 100%
 }
 
-button{
-	background-color: red;
-	border-radius: 7px;
-	height: 30px;
-	width: 100px;
-	border-color: black;
-}
-
-button:hover{
-	background-color: white;
-}
-button:focus{
-	background-color: red;
-}
 
 
 input[type=submit]:hover{
 
-	background-color: white;
+	background-color: rgba(38,38,38,0.35);
+	color : #ffffff;
 }
 
-input[type=submit]:focus{
-	background-color:#32CD32;	
+input[type=submit]:active{
+	background-color: rgba(38,38,38,0.6);;	
+
 }
