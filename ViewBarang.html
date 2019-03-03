@@ -81,7 +81,7 @@
           <h2 id="harga" style="color:#B22222">Harga : Rp.59.000</h2>
           <h4>Description</h4>
           <p id="shortDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots" style="display : inline;">...</span><span id="descriptionMore" style="display : none;">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-          <button class="button1" onclick="showAndHideDesc()" id="myBtn">Read more ▼</button>
+          <button class="button1" onclick="showAndHideDesc()" id="myBtn">Baca lebih ▼</button>
 
 
           <table style="margin-top: 30px;">
@@ -110,29 +110,33 @@
         </div>
         <div id="content1">
           <div id="Rincian" class="tabcontent" style="display:block">
-            <h3>London</h3>
-            <p>London is the capital city of England.</p>
+            <p id="textRincian">Tidak ada rincian</p>
           </div>
 
           <div id="Ulasan" class="tabcontent" style="display:none">
-            <h3>Paris</h3>
-            <p>Paris is the capital of France.</p>
+            <div class="InputChat" name="key">
+              <div id="reviewBlock" style="text-align:center">
+                <h5  style="padding-left:4%;" id="name">Belum Ada Ulasan</h5>
+              </div>
+            </div>
           </div>
 
           <div id="Pertanyaan" class="tabcontent" style="display:none">
             <div class="InputChat">
                 <h4 style="padding-left:10px">Tulis Pertanyaan</h4>
                 <div style="width:100%">
-                  <textarea style="width:98%; padding: 0.9%; resize: none; height:80px; margin:0px; border-left:none;border-right:none;"></textarea>
+                  <textarea style="width:98%; padding: 0.9%; resize: none; height:80px; margin:0px; border-left:none;border-right:none;" placeholder="Ketik pertanyaan-mu disini"></textarea>
                 </div>
                 <div style="width:100%; text-align:right;">
                   <button class="button1" onclick="newQuestion()" style="width:10%;resize: none; height:40px;margin:10px;margin-top: 5px;border-radius:5px;">Kirim</button>
                 </div>
             </div>
             <div id="pertanyaanHolder" class="Massage">
-              
-
-
+              <div class="InputChat" name="key">
+                <div id="reviewBlock" style="text-align:center">
+                  <h5  style="padding-left:4%;" id="name">Belum Ada Pertanyaan</h5>
+                </div>
+              </div>
             </div>
 
           </div>

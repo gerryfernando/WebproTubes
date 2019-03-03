@@ -138,8 +138,14 @@ function newQuestion(){
 }
 
 //Load All Question
-$.get( "https://api.myjson.com/bins/1fk0pq", function( data  , status , xhr) {
-    for (var k in data){
+$.get( "https://api.myjson.com/bins/nmsfy", function( data  , status , xhr) {
+    document.getElementById("Rincian").querySelector("#textRincian").innerHTML = data["detail"];
+    for (var k in data["review"]){
+        if (typeof data[k] !== 'function') {
+            addReview(data[k].name , data[k].review);
+        }
+    }
+    for (var k in data["question"]){
         if (typeof data[k] !== 'function') {
             addQuestion(data[k].name , data[k].question , k);
         }
@@ -210,4 +216,28 @@ function addComment(objPertanyaan , name , comment){
     objPertanyaan.innerHTML = "Sembunyikan balasan ▲"
     return;
   }
+}
+
+addReview = function (name,review){
+    let pertanyaan = document.getElementById("Ulasan");
+
+    let file = "html/review.html";
+    if (file) {
+      /* Make an HTTP request using the attribute value as the file name: */
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {
+            let objPertanyaan = $(this.responseText);
+            objPertanyaan[0].querySelector("#name").innerHTML = name;
+            objPertanyaan[0].querySelector("#review").innerHTML = review;
+            pertanyaan.prepend(objPertanyaan[0]);
+          }
+          if (this.status == 404) {pertanyaan.innerHTML = "Page not found.";}
+        }
+      }
+      xhttp.open("GET",file, true);
+      xhttp.send();
+      return;
+    }
 }
